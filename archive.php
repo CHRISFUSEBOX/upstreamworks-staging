@@ -90,6 +90,7 @@ $countPosts = $wp_the_query->post_count;
 									}
 								} else {
 									// Loop through each category to determine parent and subcategories
+									$sub_category = null;
 									foreach ($categories as $category) {
 										if ($category->parent == 0) {
 											// This is the parent category
@@ -99,9 +100,9 @@ $countPosts = $wp_the_query->post_count;
 											$sub_category = $category;
 										}
 									}
-							
+
 									// Check if the subcategory has a color assigned
-									$sub_category_color = ( isset( $sub_category ) && ! is_null( $sub_category ) ) ? get_field('category_color', 'category_' . $sub_category->term_id) : null;
+									$sub_category_color = ( ! is_null( $sub_category ) ) ? get_field('category_color', 'category_' . $sub_category->term_id) : null;
 									if ($sub_category_color) {
 										$category_color = $sub_category_color;
 									} else {
@@ -187,7 +188,7 @@ $countPosts = $wp_the_query->post_count;
 				
 				<div class="newspageing">
 					
-					<?php if ( function_exists( 'pagination' ) && ! is_null( $loop ) ) { pagination( $loop->max_num_pages ); } ?>
+					<?php if ( function_exists( 'pagination' ) && isset( $loop ) && isset( $loop->max_num_pages ) ) { pagination( $loop->max_num_pages ); } ?>
 				
 				</div>
 				
