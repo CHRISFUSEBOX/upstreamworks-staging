@@ -101,7 +101,7 @@ $countPosts = $wp_the_query->post_count;
 									}
 							
 									// Check if the subcategory has a color assigned
-									$sub_category_color = get_field('category_color', 'category_' . $sub_category->term_id);
+									$sub_category_color = ( isset( $sub_category ) && ! is_null( $sub_category ) ) ? get_field('category_color', 'category_' . $sub_category->term_id) : null;
 									if ($sub_category_color) {
 										$category_color = $sub_category_color;
 									} else {
