@@ -17,12 +17,7 @@
  * @since Custom Theme 1.0
  */
 
-get_header(); 
-$url = $_SERVER['REQUEST_URI'];
-$result = basename(parse_url("/" . $url, PHP_URL_PATH));
-$paged = (is_numeric($result)) ? esc_attr($result) : 1;
-$countPosts = $wp_the_query->post_count;
- ?>
+get_header(); ?>
 
     <!-- BEGIN: banner wrapper -->
     <section id="bannerWrapper">
@@ -157,8 +152,8 @@ $countPosts = $wp_the_query->post_count;
             						<span>|</span>
 									<?php
     								$source = get_field('date');
-    								$date = new DateTime($source); 
-    							    if ( $date ) {
+    							    if ( $source ) {
+    							    $date = new DateTime($source);
     							    ?>
     							    <span class="post-date">
     							        <?php echo $date->format('F j, Y'); ?>
@@ -188,7 +183,7 @@ $countPosts = $wp_the_query->post_count;
 				
 				<div class="newspageing">
 					
-					<?php if ( function_exists( 'pagination' ) && isset( $loop ) && isset( $loop->max_num_pages ) ) { pagination( $loop->max_num_pages ); } ?>
+					<?php if ( function_exists( 'pagination' ) ) { pagination( $GLOBALS['wp_query']->max_num_pages ); } ?>
 				
 				</div>
 				
