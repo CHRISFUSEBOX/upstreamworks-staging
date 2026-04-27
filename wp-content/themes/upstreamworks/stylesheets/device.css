@@ -327,10 +327,18 @@
 		.copyrightArea { padding: 11px 0 20px 0; }	
 				
 }	
-@media only screen and (min-width: 992px) and (max-width: 1199px) {	
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
 
 	/* container */
 	.container2 { padding: 0 15px; width: 970px; }
+
+	/* hide desktop nav, show hamburger — too many items to fit at this width */
+	.menuArea, .contactArea { display: none; }
+	.mobilemenuArea { float: right; display: block; }
+	.mobilemenuArea .menutoggle { width: 30px; float: left; }
+	.mobilemenuArea .menutoggle span { margin-bottom: 4px; width: 100%; height: 4px; float: left; background: #fff; }
+	.mobilemenuArea .menutoggle span:last-child { margin-bottom: 0px; }
+	#bannerWrapper { margin-top: -107px; }
 	
 	/* engage area */	
 	.engageArea h2 { width: 100%; }
