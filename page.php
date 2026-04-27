@@ -18,7 +18,7 @@ get_header(); the_post(); ?>
 		<!-- BEGIN: shortbanner area -->
 		<?php if(have_rows('banner', 82803)): while(have_rows('banner', 82803)): the_row();?>
 		<?php $image = get_sub_field('banner_image'); ?>
-		<article class="shortbannerArea"<?php if ( $image && isset( $image['url'] ) ) : ?> style="background-image: url(<?php echo $image['url']; ?>);"<?php endif; ?>>
+		<article class="shortbannerArea"<?php if ( $image && isset( $image['url'] ) ) : ?> style="background-image: url(<?php echo esc_url( $image['url'] ); ?>);"<?php endif; ?>>
 
 		</article>
 		<!-- END: shortbanner area -->
@@ -60,7 +60,7 @@ get_header(); the_post(); ?>
 						
 					} 
 					?>
-					 <aside onclick="location.href='<?php the_sub_field('blog_link'); ?>'" class="case <?php echo $class; ?> col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					 <aside onclick="location.href='<?php echo esc_js( get_sub_field('blog_link') ); ?>'" class="case <?php echo esc_attr( $class ); ?> col-xs-12 col-sm-4 col-md-4 col-lg-4">
 						
 						<h3><?php the_sub_field('blog_title'); ?></h3>
 						<?php the_sub_field('blog_description'); ?>

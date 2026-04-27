@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       sf14g.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 't.sf14g.com/sf14g.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sf14g, s);
       })();
-
+</script>
 
 <!-- Hotjar Tracking Code for https://www.upstreamworks.com/platforms/amazon-connect/watch-demo -->
 <?php if ( ! defined('WP_ENV') || WP_ENV !== 'staging' ) : ?>
@@ -51,7 +51,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 <?php endif; ?>
-	</script> 
 <meta name="google-site-verification" content="30ycLKRe540zJvLx4VbB-OHC84yfD4YSgDLZtVvXKYo" />
 <meta name="google-site-verification" content="y2MHLTGN0Awqnw9yHmzm0bPLh3S0IArEJWR_bFWpfZ8" />
  <script src="<?php echo get_template_directory_uri(); ?>/javascripts/cf7.js"></script> 
@@ -77,4 +76,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="wrapper"><!-- BEGIN: header wrapper -->    
 <header id="headerWrapper">
 <div class="container"><!-- BEGIN: logo area -->
-	<nav class="logoArea">	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a></nav><!-- END: logo area --><!-- BEGIN: header right --><div class="headeRight"><!-- BEGIN: contact area --><nav class="contactArea"><?php wp_nav_menu('menu=topmenu'); ?></nav><!-- END: contact area --><!-- BEGIN: menu area --><nav class="menuArea"><?php wp_nav_menu('menu=mainmenu'); ?>	</nav><!-- END: menu area --><!-- BEGIN: mobilemenu area --><nav class="mobilemenuArea"><a class="menutoggle" href="#menu"><span></span><span></span><span></span></a><nav id="menu"><?php wp_nav_menu('menu=mobilemenu'); ?>	</nav>	</nav><!-- END: mobilemenu area -->	</div><!-- END: header right -->   </div>    </header>    <!-- END: header wrapper -->
+	<nav class="logoArea">	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a></nav><!-- END: logo area --><!-- BEGIN: header right --><div class="headeRight"><!-- BEGIN: contact area --><nav class="contactArea"><?php wp_nav_menu( array( 'menu' => 'topmenu' ) ); ?></nav><!-- END: contact area --><!-- BEGIN: menu area --><nav class="menuArea"><?php wp_nav_menu( array( 'menu' => 'mainmenu' ) ); ?>	</nav><!-- END: menu area --><!-- BEGIN: mobilemenu area --><nav class="mobilemenuArea"><a class="menutoggle" href="#menu"><span></span><span></span><span></span></a><nav id="menu"><?php wp_nav_menu( array( 'menu' => 'mobilemenu' ) ); ?>	</nav>	</nav><!-- END: mobilemenu area -->	</div><!-- END: header right -->   </div>    </header>    <!-- END: header wrapper -->

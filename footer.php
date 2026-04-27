@@ -31,17 +31,17 @@
 
 
 				
-				<?php wp_nav_menu('menu=footermenu'); ?>
+				<?php wp_nav_menu( array( 'menu' => 'footermenu' ) ); ?>
 			
 			</aside>
 			
 			<nav class="social">
 				<ul>
-					<li><a class="fa-brands fa-linkedin" target="_blank" href="<?php the_field('linkedin','options'); ?>"></a></li>
-					
-					<li><a class="fa-brands fa-square-facebook" target="_blank" href="<?php the_field('facebook','options'); ?>"></a></li>
-					
-                    <li><a class="fa-brands fa-square-bluesky" target="_blank" href="<?php the_field('bluesky','options'); ?>"></a></li>
+					<li><a class="fa-brands fa-linkedin" target="_blank" href="<?php echo esc_url( get_field('linkedin','options') ); ?>"></a></li>
+
+					<li><a class="fa-brands fa-square-facebook" target="_blank" href="<?php echo esc_url( get_field('facebook','options') ); ?>"></a></li>
+
+                    <li><a class="fa-brands fa-square-bluesky" target="_blank" href="<?php echo esc_url( get_field('bluesky','options') ); ?>"></a></li>
 				</ul>
 			
 			</nav>

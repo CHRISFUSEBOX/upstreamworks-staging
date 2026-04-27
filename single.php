@@ -15,7 +15,7 @@ get_header(); ?>
 		<!-- BEGIN: shortbanner area -->
 		<?php if(have_rows('banner', 82803)): while(have_rows('banner', 82803)): the_row();?>
 		<?php $image = get_sub_field('banner_image'); ?>
-		<article class="shortbannerArea"<?php if ( $image && isset( $image['url'] ) ) : ?> style="background-image: url(<?php echo $image['url']; ?>);"<?php endif; ?>>
+		<article class="shortbannerArea"<?php if ( $image && isset( $image['url'] ) ) : ?> style="background-image: url(<?php echo esc_url( $image['url'] ); ?>);"<?php endif; ?>>
 
 		</article>
 		<!-- END: shortbanner area -->
