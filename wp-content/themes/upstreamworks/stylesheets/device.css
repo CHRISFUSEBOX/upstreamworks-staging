@@ -1,0 +1,392 @@
+@media only screen and (max-width: 767px) {	
+	
+	/* container */	
+	.container2 { padding: 0 15px; width: 100%; }
+	
+	/* header wrapper */
+	#headerWrapper { padding: 15px 0 0 0; }
+	
+	/* heade right */	
+	.headeRight { padding: 36px 0 0 0; float: right; }	
+	
+	/* logo area */	
+	.logoArea { padding: 0px; text-align: center; }
+	.logoArea a { display: inline-block; }	
+	.logoArea img { max-width: 100%; }	
+	
+	/* menu area */	
+	.menuArea, .contactArea { display: none; }	
+	
+		/* mobilemenu area */	
+		.mobilemenuArea { float: right; display: block; }
+		.mobilemenuArea .menutoggle { width: 30px; float: left; }	
+		.mobilemenuArea .menutoggle span { margin-bottom: 4px; width: 100%; height: 4px; float: left; background: #fff; }	
+		.mobilemenuArea .menutoggle span:last-child { margin-bottom: 0px; }	
+		
+		/* banner wrapper */
+		#bannerWrapper  { margin-top: -107px; }	
+		
+		/* banner area */	
+		.bannerArea .item { padding: 160px 0 80px 0; height: auto; text-align: left; }	
+		.bannerArea .overlay { width: 100%; }
+		.bannerArea h1 { font-size: 22px; line-height: 32px; }
+		.bannerArea p { font-size: 18px; text-align: justify; line-height: 28px; }
+		.bannerArea a { font-size: 18px; }
+		
+		/* innerbanner area */	
+		.innerbannerArea .item { padding: 150px 0 60px 0; }	
+		.innerbannerArea .overlay { width: 100%; }
+		.innerbannerArea h1 { font-size: 20px; line-height: 32px; }
+		.innerbannerArea p { font-size: 18px; line-height: 30px; }	
+		
+		/* shortbanner area */	
+		.shortbannerArea { min-height: 120px; }		
+		
+		/* smart area */		
+		.smartArea .text h2 { font-size: 24px; line-height: 36px; }	
+		
+		/* seamless area */	
+		.seamlessArea { padding: 20px 0 40px 0; }
+		.seamlessArea .text h2 { font-size: 24px; line-height: 36px; }
+		.seamlessArea .sales { padding-top: 30px; padding-left: 15px; }	
+		.seamlessArea .sales li { width: 49% !important }	
+		
+		/* ourteam area */	
+		.ourteamArea .team .text { padding: 10px 15px 20px 15px; }	
+		.ourteamArea .team .text h3 { font-size: 26px; }
+		.ourteamArea .team .text { font-size: 18px; }		
+		
+		/* engage area */		
+		.engageArea h2 { width: auto; display: block; font-size: 22px; line-height: 34px; }	
+		.engageArea .engage { padding: 40px 0 0 0; font-size: 20px; }		
+		.engageArea .engage .item { width: 100%; }			
+		
+		/* take area */		
+		.takeArea span { margin: 0 0 15px 0; display: block; font-size: 22px; }	
+		.takeArea a { padding: 13px 25px 9px 25px; font-size: 15px; }		
+		
+		/* works area */	
+		.worksArea { padding: 30px 0 20px 0; text-align: left; }		
+		.worksArea h2 { margin-bottom: 20px; font-size: 28px; }	
+		.worksArea .works { margin-bottom: 30px; text-align: justify; }	
+		.worksArea .works p { margin-bottom: 20px; text-align: justify; }	
+		.worksArea .works h3 { text-align: justify; }	
+		.worksArea .works h3 br, .worksArea .works p br { display: none; }
+		
+		/* expectation area */		
+		.expectationArea { padding: 30px 0 40px 0; background: #f4f3ef }	
+		.expectationArea .text { padding-left: 15px; font-size: 17px; }		
+		.expectationArea h2 { font-size: 22px; line-height: 34px; }		
+		.expectationArea .text p { text-align: justify; }
+		
+		/* team area */	
+		.teamArea h2 { width: auto; display: block; font-size: 25px; line-height: 36px; }
+		.teamArea .team { padding: 0px; }	
+		.teamArea .team .our:first-child  { padding-bottom: 30px; }	
+		.teamArea .team .sub { min-height: 310px; }	
+		.teamArea .team .sub a { top: 0px; }			
+		
+		/* channel area */	
+		.channelArea { padding: 25px 0 40px 0; }	
+		.channelArea .text { padding-top: 0px; padding-bottom: 30px; font-size: 16px; }
+		.channelArea .text h2 { font-size: 20px; line-height: 32px; }		
+		.channelArea .text p { margin-bottom: 15px; text-align: justify; }	
+		.channelArea .text a { padding: 12px 25px 9px 25px; }		
+		.channelArea .image { padding-left: 15px; }			
+		
+		/* action area */	
+		.actionArea { padding: 30px 0 40px 0; text-align: left; }	
+		.actionArea .action { width: 100%; }	
+		.actionArea h2 { margin-bottom: 25px; font-size: 26px; line-height: 38px; }	
+		.actionArea p { margin: 25px 0; text-align: justify; }	
+		.actionArea strong { font-size: 17px; }
+		
+		/* case area */		
+		.caseArea .case { padding: 12px 15px 0 15px; min-height: 230px; }
+		.caseArea p { text-align: justify; }
+		
+		/* success area */		
+		.successArea { padding: 30px 0 45px 0; }	
+		.successArea h2 { font-size: 28px; }	
+		.successArea .success { width: 100%; }		
+		.successArea img { margin: 0 0 5px 0; width: 100px; height: auto; }		
+	
+		/* leader area */	
+		.leaderArea h2 { font-size: 28px; line-height: 38px; }
+		.leaderArea .short { width: 100%; font-size: 18px; }	
+		.leaderArea .leader .sub .image { padding: 15px 0 0 0; }	
+		.leaderArea .leader .sub .image img { max-width: 100%; }
+		.leaderArea .leader .sub .text { padding: 0px; }		
+		
+		/* news area */	
+		.newsArea { padding: 40px 0; }
+		.newsArea .news { padding: 20px 0; }	
+		.newsArea h2 { font-size: 28px; line-height: 38px; }	
+		.newsArea .short { width: 100%; font-size: 18px; }	
+		.newsArea .news .sub { padding: 20px; }	
+		.newsArea .news .sub .text { padding: 15px 0 0 0; }
+		.newsArea .news .sub .text h3 { font-size: 20px; }	
+		
+		/* headset area */		
+		.headsetArea { padding: 30px 0; }
+		.headsetArea h2 { width: 100%; font-size: 22px; line-height: 30px; }	
+		.headsetArea .image img { margin: 0px; }	
+		.headsetArea .text { padding: 5px 15px 0 15px; }	
+		.headsetArea .text h3 { font-size: 22px; }		
+		
+		/* demo area */	
+		.demoArea { padding: 20px 0 40px 0; }
+		.demoArea .left { padding-right: 15px; }	
+		.demoArea .left h3 { font-size: 22px; line-height: 32px; }
+		.demoArea .right h3 { font-size: 22px; }	
+		.demoArea .right .fleft { width: 100%; }
+		.demoArea .right .check { margin-bottom: 20px; }
+		
+		/* professional area */
+		.professionalArea::before { display: none; }
+		.professionalArea::after { display: none; }
+		.professionalArea .professional { padding: 25px 15px 40px 15px; background: url("../images/professional_bg.jpg") no-repeat right center; background-size: cover; }
+		.professionalArea .professional h3 { margin-bottom: 20px; }
+		.professionalArea .service { padding: 40px 15px 30px 15px; background: #e3eaec; }
+		
+		.successArea p { text-align: justify; }
+		
+		/* text area */		
+		.textArea { padding: 40px 0 0 0; }	
+		.textArea .text { width: 100%; }		
+		
+		/* content area */	
+		.contentArea { padding: 40px 0; font-size: 16px; }
+		.contentArea h1 { font-size: 26px; }		
+		.contentArea h2 { font-size: 24px; }			
+		
+		/* call outs */	
+		.callOuts .fgroup { padding: 0 0 20px 0; width: 100%; }
+		.callOuts .fgroup.half { width: 100%; }		
+		
+		/* footer area */	
+		.footerArea { padding: 15px 0 25px 0; }	
+		.footerArea .link { margin: 0px; width: 100%; }	
+		
+		/* copyright area */	
+		.copyrightArea { padding: 15px 0; }
+		.copyrightArea .copyright { width: 100%; text-align: center; }	
+		.copyrightArea .copyright p { float: none; }	
+		.copyrightArea .copyright ul { margin: 6px 0 0 0; float: none; }
+		.copyrightArea .copyright li { padding: 0 5px; float: none; display: inline-block; }
+		.copyrightArea .copyright .menu-footermenu-container { width: 100%; }	
+		.copyrightArea .social { width: 100%; text-align: center; }	
+		.copyrightArea .social li { padding: 0 5px; float: none; display: inline-block; }
+		
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+		/* seamless area */		
+		.seamlessArea .sales li { width: 32.3%; }	
+		
+		/* engage area */	
+		.engageArea .engage .item { width: 50%; }	
+	
+		/* footer area */
+		.footerArea .link { width: 50%; }
+		
+		/* copyright area */	
+		.copyrightArea .copyright { padding: 0px; width: auto; text-align: left; }
+		.copyrightArea .social { padding: 8px 0 0 0; width: auto; }	
+		.copyrightArea .social li { padding: 0 0 0 4px; }		
+		
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+	/* container */
+	.container2 { padding: 0 15px; width: 750px; }
+
+		/* logo area */		
+		.logoArea { padding: 0px; }	
+		.logoArea img { max-width: 100%; }
+
+		/* hide desktop nav, show hamburger at tablet */
+		.menuArea, .contactArea { display: none; }
+		.mobilemenuArea { float: right; display: block; }
+		.mobilemenuArea .menutoggle { width: 30px; float: left; }
+		.mobilemenuArea .menutoggle span { margin-bottom: 4px; width: 100%; height: 4px; float: left; background: #fff; }
+		.mobilemenuArea .menutoggle span:last-child { margin-bottom: 0px; }
+		#bannerWrapper { margin-top: -107px; }
+
+		/* banner area */	
+		.bannerArea .item { padding: 200px 0 100px 0; height: auto; }
+
+		/* innerbanner area */	
+		.innerbannerArea .overlay { width: 100%; }	
+		.innerbannerArea h1 { font-size: 31px; }	
+		.innerbannerArea p { font-size: 28px; }	
+
+		/* shortbanner area */		
+		.shortbannerArea { min-height: 135px; }	
+
+		/* engage area */		
+		.engageArea h2 { width: 100%; font-size: 24px; }	
+		.engageArea .engage { font-size: 16px; }
+		.engageArea .engage .item { width: 33.33%; }
+
+		/* take area */		
+		.takeArea span { margin: 0 0 12px 0; display: block; font-size: 22px; }	
+		.takeArea a { padding: 13px 20px 9px 20px; font-size: 15px; }
+
+		/* works area */	
+		.worksArea { padding: 25px 0 50px 0; }
+		.worksArea h2 { margin-bottom: 10px; font-size: 28px; }	
+		.worksArea .works { font-size: 15px; }	
+		.worksArea .works h3 { font-size: 18px; }		
+		.worksArea .works p { margin-bottom: 20px; }
+
+		/* expectation area */	
+		.expectationArea { padding: 40px 0 45px 0; }	
+		.expectationArea .text { padding-left: 30px; }
+
+		/* content area */	
+		.contentArea h1 { font-size: 26px; }		
+		.contentArea h2 { font-size: 24px; }	
+
+		/* headset area */		
+		.headsetArea { padding: 30px 0; }
+		.headsetArea h2 { width: 100%; font-size: 22px; line-height: 30px; }	
+		.headsetArea .image img { margin: 0px; }	
+		.headsetArea .text { padding: 0px 15px 0 15px; }	
+		.headsetArea .text h3 { margin-top: 0px; font-size: 22px; }
+
+		/* demo area */	
+		.demoArea { padding: 20px 0 40px 0; }	
+		.demoArea .left { padding-right: 15px; }	
+		.demoArea .left h3 { font-size: 22px; line-height: 32px; }	
+		.demoArea .right h3 { font-size: 22px; }		
+		.demoArea .right .fleft { width: 49%; }		
+		.demoArea .right .check { margin-bottom: 20px; }
+
+		/* ourteam area */	
+		.ourteamArea .team .text { padding: 10px 15px 20px 15px; }
+		.ourteamArea .team .text h3 { margin-top: 0px; font-size: 26px; }	
+		.ourteamArea .team .text { font-size: 18px; }	
+
+		/* text area */		
+		.textArea { padding: 40px 0 0 0; }		
+		.textArea .text { width: 100%; }	
+
+		/* showcase list */	
+		.showcaseList .listItels .sub { min-height: 330px; }	
+
+		/* team area */	
+		.teamArea h2 { width: 100%; }	
+		.teamArea .team .sub { min-height: 310px; }	
+
+		/* channel area */		
+		.channelArea { padding: 30px 0 48px 0; }	
+		.channelArea .text { padding-top: 0px; font-size: 16px; }	
+		.channelArea .text h2 { font-size: 24px; line-height: 34px; }	
+		.channelArea .text p { margin-bottom: 20px; }	
+		.channelArea .image { padding-top: 50px; padding-left: 15px; }
+
+		/* action area */		
+		.actionArea p { margin: 40px 0 24px 0; }	
+
+		/* case area */		
+		.caseArea .case { padding: 12px 15px 0 15px; }
+		.caseArea span { font-size: 20px; }	
+
+		/* call outs */	
+		.callOuts .right .fgroup { width: 50%; }	
+		.callOuts .right .fgroup.half { width: 100%; }	
+		.callOuts .right .fgroup.full { width: 100%; }
+
+		/* leader area */	
+		.leaderArea .short { width: 100%; }
+		.leaderArea .leader .sub .image img { max-width: 100%; }
+
+		/* news area */		
+		.newsArea { padding: 40px 0; }	
+		.newsArea .news { padding: 30px 0 0 0; }		
+		.newsArea .short { width: 100%; }	
+		.newsArea .news .sub { padding: 20px; }
+		.newsArea .news .sub .text { padding: 0 15px; }	
+		.newsArea .news .sub .text h3 { font-size: 20px; }	
+
+		/* professional area */	
+		.professionalArea .service h3 { font-size: 22px; line-height: 32px; }	
+		.professionalArea .service { font-size: 16px; }
+
+		/* seamless area */		
+		.seamlessArea { padding: 40px 0; }	
+		.seamlessArea .sales { padding-top: 30px; padding-left: 30px; }	
+		.seamlessArea .sales li { width: 32.3%; }	
+
+		/* smart area */		
+		.smartArea .text h2 { font-size: 30px; }	
+
+		/* copyright area */	
+		.copyrightArea { padding: 11px 0 20px 0; }	
+				
+}	
+@media only screen and (min-width: 992px) and (max-width: 1199px) {	
+
+	/* container */
+	.container2 { padding: 0 15px; width: 970px; }
+	
+	/* engage area */	
+	.engageArea h2 { width: 100%; }
+	.engageArea .engage { font-size: 20px; }	
+	
+	/* team area */	
+	.teamArea .team .sub figure { padding: 0 8px; }	
+	.teamArea .team .sub figure img { max-width: 100%; }	
+	
+	/* channel area */		
+	.channelArea .text { padding-top: 0px; }	
+	
+	/* expectation area */	
+	.expectationArea { padding: 90px 0; }	
+	
+	/* leader area */	
+	.leaderArea .short { width: 100%; }	
+	.leaderArea .leader .sub .image img { max-width: 100%; }	
+	
+	/* news area */		
+	.newsArea .short { width: 100%; }
+	
+	/* seamless area */	
+	.seamlessArea { padding: 40px 0; }
+	.seamlessArea .sales { padding-top: 30px; padding-left: 30px; }	
+	.seamlessArea .sales li { width: 32.3%; }		
+	
+	/* headset area */		
+	.headsetArea { padding: 30px 0; }	
+	.headsetArea h2 { width: 100%; font-size: 22px; line-height: 30px; }	
+	.headsetArea .image img { margin: 0px; }	
+	.headsetArea .text { padding: 0px 15px 0 15px; }	
+	.headsetArea .text h3 { margin-top: 0px; font-size: 22px; }
+	
+	/* demo area */		
+	.demoArea { padding: 20px 0 40px 0; }	
+	.demoArea .left { padding-right: 15px; }	
+	.demoArea .left h3 { font-size: 22px; line-height: 32px; }
+	.demoArea .right h3 { font-size: 22px; }	
+	.demoArea .right .fleft { width: 49%; }	
+	.demoArea .right .check { margin-bottom: 20px; }	
+	
+	/* take area */	
+	.takeArea span { margin: 0 0 12px 0; display: block; font-size: 22px; }	
+	.takeArea a { padding: 13px 20px 9px 20px; font-size: 15px; }
+	
+	/* ourteam area */	
+	.ourteamArea .team .text { padding: 10px 15px 20px 15px; }
+	.ourteamArea .team .text h3 { margin-top: 0px; font-size: 26px; }	
+	.ourteamArea .team .text { font-size: 18px; }		
+	
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1279px) {
+	
+	/* container */	
+	.container2 { padding: 0 15px; width: 1200px; }
+	
+}
