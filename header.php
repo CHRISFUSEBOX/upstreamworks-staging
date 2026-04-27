@@ -1,4 +1,7 @@
 <!DOCTYPE html><!--[if IE 7]><html class="ie ie7" <?php language_attributes(); ?>><![endif]--><!--[if IE 8]><html class="ie ie8" <?php language_attributes(); ?>><![endif]--><!--[if !(IE 7) & !(IE 8)]><!--><html <?php language_attributes(); ?>><!--<![endif]--><head>	<meta charset="<?php bloginfo( 'charset' ); ?>"><meta name="viewport" content="width=device-width"><title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title><link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"><!--[if lt IE 9]>	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>	<![endif]--><?php wp_head(); ?>  
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="//t.sf14g.com">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-610621116"></script>
 <script>
@@ -18,16 +21,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-42289123-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 <script type="text/javascript" language="javascript">
       var sf14gv = 12243;
@@ -53,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <?php endif; ?>
 <meta name="google-site-verification" content="30ycLKRe540zJvLx4VbB-OHC84yfD4YSgDLZtVvXKYo" />
 <meta name="google-site-verification" content="y2MHLTGN0Awqnw9yHmzm0bPLh3S0IArEJWR_bFWpfZ8" />
- <script src="<?php echo get_template_directory_uri(); ?>/javascripts/cf7.js"></script> 
+ <script defer src="<?php echo get_template_directory_uri(); ?>/javascripts/cf7.js"></script>
 <script>
 	window.SGPMPopupLoader=window.SGPMPopupLoader||{ids:[],popups:{},call:function(w,d,s,l,id){
 		w['sgp']=w['sgp']||function(){(w['sgp'].q=w['sgp'].q||[]).push(arguments[0]);}; 

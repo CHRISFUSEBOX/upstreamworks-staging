@@ -63,7 +63,7 @@
 <?php endif; ?>
 <!-- END: wrapper -->
 
- <script src="<?php echo get_template_directory_uri(); ?>/javascripts/eventsadj.js"></script> 	
+ <script defer src="<?php echo get_template_directory_uri(); ?>/javascripts/eventsadj.js"></script>
 
 <!-- Upstream Works Chat -->
 <?php if ( ! defined('WP_ENV') || WP_ENV !== 'staging' ) : ?>
