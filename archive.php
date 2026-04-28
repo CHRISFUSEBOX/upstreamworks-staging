@@ -25,8 +25,8 @@ get_header(); ?>
 		<!-- BEGIN: shortbanner area -->
 		<?php if(have_rows('banner',get_option( 'page_for_posts' ))): while(have_rows('banner',get_option( 'page_for_posts' ))): the_row();?>
 		<?php $image = get_sub_field('banner_image'); ?>
-		<article class="shortbannerArea" style="background-image: url(<?php echo $image['url']; ?>);">
-			
+		<article class="shortbannerArea"<?php if ( $image && isset( $image['url'] ) ) : ?> style="background-image: url(<?php echo esc_url( $image['url'] ); ?>);"<?php endif; ?>>
+
 		</article>
 		<!-- END: shortbanner area -->
         <?php endwhile; wp_reset_query(); endif; ?>

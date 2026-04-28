@@ -18,7 +18,9 @@
       "Bash(ssh -i *)",
       "Bash(curl -o /dev/null -s -w \"DNS: %{time_namelookup}s | Connect: %{time_connect}s | TTFB: %{time_starttransfer}s | Total: %{time_total}s | Size: %{size_download} bytes | HTTP: %{http_code}\\\\n\" https://stage.upstreamworks.com/)",
       "Bash(curl -si \"https://stage.upstreamworks.com/wp-content/\")",
-      "Bash(curl -s \"https://stage.upstreamworks.com/robots.txt\")"
+      "Bash(curl -s \"https://stage.upstreamworks.com/robots.txt\")",
+      "Bash(curl -o /dev/null -s -w \"HTTP: %{http_code} | TTFB: %{time_starttransfer}s | Total: %{time_total}s\\\\n\" https://stage.upstreamworks.com/)",
+      "Bash(scp -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no /tmp/fix_wpconfig.py upstreamunix@vmyza934.hostpapavps.net:/tmp/fix_wpconfig.py)"
     ]
   }
 }
