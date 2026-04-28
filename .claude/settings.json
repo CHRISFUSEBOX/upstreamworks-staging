@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ssh -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no upstreamunix@vmyza934.hostpapavps.net \"find /home/upstreamunix/stage.upstreamworks.com/wp-content/themes/upstreamworks -type f\")",
+      "Bash(ssh -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no upstreamunix@vmyza934.hostpapavps.net \"cat /home/upstreamunix/stage.upstreamworks.com/wp-content/themes/upstreamworks/stylesheets/device.css\")",
+      "Bash(ssh -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no upstreamunix@vmyza934.hostpapavps.net \"cat /home/upstreamunix/stage.upstreamworks.com/wp-content/themes/upstreamworks/javascripts/global.js\")",
+      "Bash(ssh -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no upstreamunix@vmyza934.hostpapavps.net \"cat /home/upstreamunix/stage.upstreamworks.com/wp-content/themes/upstreamworks/functions.php\")",
+      "Bash(scp -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no upstreamunix@vmyza934.hostpapavps.net:/home/upstreamunix/stage.upstreamworks.com/wp-content/themes/upstreamworks/functions.php \"g:/My Drive/upstreamworks-staging/wp-content/themes/upstreamworks/functions.php\")",
+      "Bash(scp -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no upstreamunix@vmyza934.hostpapavps.net:/home/upstreamunix/stage.upstreamworks.com/wp-content/themes/upstreamworks/stylesheets/device.css \"g:/My Drive/upstreamworks-staging/wp-content/themes/upstreamworks/stylesheets/device.css\")",
+      "Bash(git commit -m ' *)",
+      "Bash(scp -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no \"g:/My Drive/upstreamworks-staging/wp-content/themes/upstreamworks/functions.php\" upstreamunix@vmyza934.hostpapavps.net:/home/upstreamunix/stage.upstreamworks.com/wp-content/themes/upstreamworks/functions.php)",
+      "Bash(ssh -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no upstreamunix@vmyza934.hostpapavps.net \"mysql -uupstreamunix_wp356 -p'p-zg22@S02' upstreamunix_wp356 -e 'SELECT url, action_type, action_data, last_count, last_access, enabled FROM usw_redirection_items ORDER BY last_count DESC LIMIT 80;' 2>/dev/null\")",
+      "Bash(ssh -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no upstreamunix@vmyza934.hostpapavps.net 'mysql -uupstreamunix_wp356 \"-pp-zg22@S02\" upstreamunix_wp356 -e \"SELECT url, action_type, action_data, last_count, last_access FROM usw_redirection_items ORDER BY last_count DESC LIMIT 80;\"')",
+      "Bash(ssh -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no upstreamunix@vmyza934.hostpapavps.net 'mysql -uupstreamunix_wp356 \"-pp-zg22@S02\" upstreamunix_wp356 -e \"SELECT url, http_code, agent, COUNT\\(*\\) as hits, MAX\\(created\\) as last_seen FROM usw_redirection_404 GROUP BY url, http_code ORDER BY hits DESC LIMIT 60;\"')",
+      "Bash(ssh -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no upstreamunix@vmyza934.hostpapavps.net 'mysql -uupstreamunix_wp356 \"-pp-zg22@S02\" upstreamunix_wp356 -e \"SELECT url, http_code, COUNT\\(*\\) as hits, MAX\\(created\\) as last_seen FROM usw_redirection_404 GROUP BY url ORDER BY hits DESC LIMIT 60;\"')",
+      "Bash(ssh -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no upstreamunix@vmyza934.hostpapavps.net 'mysql -uupstreamunix_wp356 \"-pp-zg22@S02\" upstreamunix_wp356 -e \"DESCRIBE usw_redirection_404;\"')",
+      "Bash(ssh -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no upstreamunix@vmyza934.hostpapavps.net 'mysql -uupstreamunix_wp356 \"-pp-zg22@S02\" upstreamunix_wp356 -e \"SELECT url, COUNT\\(*\\) as hits FROM usw_redirection_404 GROUP BY url ORDER BY hits DESC LIMIT 60;\" 2>&1')",
+      "Bash(ssh -i *)",
+      "Bash(curl -o /dev/null -s -w \"DNS: %{time_namelookup}s | Connect: %{time_connect}s | TTFB: %{time_starttransfer}s | Total: %{time_total}s | Size: %{size_download} bytes | HTTP: %{http_code}\\\\n\" https://stage.upstreamworks.com/)",
+      "Bash(curl -si \"https://stage.upstreamworks.com/wp-content/\")",
+      "Bash(curl -s \"https://stage.upstreamworks.com/robots.txt\")"
+    ]
+  }
+}

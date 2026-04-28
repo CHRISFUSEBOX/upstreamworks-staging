@@ -1,0 +1,2 @@
+# MCP config contains DB credentials - keep out of version control
+.mcp.json
