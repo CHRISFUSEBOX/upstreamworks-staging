@@ -76,12 +76,12 @@ function add_theme_scripts() {
   wp_enqueue_style( 'bootstrap-css', get_template_directory_uri().'/stylesheets/bootstrap.min.css');	  
   wp_enqueue_style( 'mmenu-css', get_template_directory_uri().'/stylesheets/jquery.mmenu.all.css'); 		  
   wp_enqueue_style( 'global-css', get_template_directory_uri().'/stylesheets/global.css');    
-  wp_enqueue_style( 'device-css', get_template_directory_uri().'/stylesheets/device.css');
-  
+  wp_enqueue_style( 'device-css', get_template_directory_uri().'/stylesheets/device.css', array(), filemtime( get_template_directory().'/stylesheets/device.css' ) );
+
   //Adding js file
   wp_enqueue_script( 'jquery' );
   wp_enqueue_script( 'mmenu-js', get_template_directory_uri().'/javascripts/jquery.mmenu.min.all.js', array( 'jquery' ), null, true );
-  wp_enqueue_script( 'global-js', get_template_directory_uri().'/javascripts/global.js', array( 'jquery', 'mmenu-js' ), null, true );
+  wp_enqueue_script( 'global-js', get_template_directory_uri().'/javascripts/global.js', array( 'jquery', 'mmenu-js' ), filemtime( get_template_directory().'/javascripts/global.js' ), true );
 }
 
 add_action("init", "create_news_post_type");
