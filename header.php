@@ -1,7 +1,6 @@
 <!DOCTYPE html><!--[if IE 7]><html class="ie ie7" <?php language_attributes(); ?>><![endif]--><!--[if IE 8]><html class="ie ie8" <?php language_attributes(); ?>><![endif]--><!--[if !(IE 7) & !(IE 8)]><!--><html <?php language_attributes(); ?>><!--<![endif]--><head>	<meta charset="<?php bloginfo( 'charset' ); ?>"><meta name="viewport" content="width=device-width"><title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title><link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"><!--[if lt IE 9]>	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>	<![endif]--><?php wp_head(); ?>  
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://www.google-analytics.com">
-<link rel="dns-prefetch" href="//t.sf14g.com">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-610621116"></script>
 <script>
@@ -21,15 +20,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 
-
-<script type="text/javascript" language="javascript">
-      var sf14gv = 12243;
-      (function() {
-      var sf14g = document.createElement('script'); sf14g.type = 'text/javascript'; sf14g.async = true;
-      sf14g.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 't.sf14g.com/sf14g.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sf14g, s);
-      })();
-</script>
 
 <!-- Hotjar Tracking Code for https://www.upstreamworks.com/platforms/amazon-connect/watch-demo -->
 <?php if ( ! defined('WP_ENV') || WP_ENV !== 'staging' ) : ?>
@@ -69,4 +59,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="wrapper"><!-- BEGIN: header wrapper -->    
 <header id="headerWrapper">
 <div class="container"><!-- BEGIN: logo area -->
-	<nav class="logoArea">	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a></nav><!-- END: logo area --><!-- BEGIN: header right --><div class="headeRight"><!-- BEGIN: contact area --><nav class="contactArea"><?php wp_nav_menu( array( 'menu' => 'topmenu' ) ); ?></nav><!-- END: contact area --><!-- BEGIN: menu area --><nav class="menuArea"><?php wp_nav_menu( array( 'menu' => 'mainmenu' ) ); ?>	</nav><!-- END: menu area --><!-- BEGIN: mobilemenu area --><nav class="mobilemenuArea"><a class="menutoggle" href="#menu"><span></span><span></span><span></span></a><nav id="menu"><?php wp_nav_menu( array( 'menu' => 'mobilemenu' ) ); ?>	</nav>	</nav><!-- END: mobilemenu area -->	</div><!-- END: header right -->   </div>    </header>    <!-- END: header wrapper -->
+	<nav class="logoArea">	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>" width="185" height="85" /></a></nav><!-- END: logo area --><!-- BEGIN: header right --><div class="headeRight"><!-- BEGIN: contact area --><nav class="contactArea"><?php wp_nav_menu( array( 'menu' => 'topmenu' ) ); ?></nav><!-- END: contact area --><!-- BEGIN: menu area --><nav class="menuArea"><?php wp_nav_menu( array( 'menu' => 'mainmenu' ) ); ?>	</nav><!-- END: menu area --><!-- BEGIN: mobilemenu area --><nav class="mobilemenuArea"><a class="menutoggle" href="#menu"><span></span><span></span><span></span></a><nav id="menu"><?php wp_nav_menu( array( 'menu' => 'mobilemenu' ) ); ?>	</nav>	</nav><!-- END: mobilemenu area -->	</div><!-- END: header right -->   </div>    </header>    <!-- END: header wrapper -->
