@@ -20,7 +20,16 @@
       "Bash(curl -si \"https://stage.upstreamworks.com/wp-content/\")",
       "Bash(curl -s \"https://stage.upstreamworks.com/robots.txt\")",
       "Bash(curl -o /dev/null -s -w \"HTTP: %{http_code} | TTFB: %{time_starttransfer}s | Total: %{time_total}s\\\\n\" https://stage.upstreamworks.com/)",
-      "Bash(scp -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no /tmp/fix_wpconfig.py upstreamunix@vmyza934.hostpapavps.net:/tmp/fix_wpconfig.py)"
+      "Bash(scp -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no /tmp/fix_wpconfig.py upstreamunix@vmyza934.hostpapavps.net:/tmp/fix_wpconfig.py)",
+      "WebFetch(domain:pagespeed.web.dev)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_wait_for",
+      "Bash(cat)",
+      "Bash(scp -i \"C:/Users/chris/.ssh/id_ed25519\" -o StrictHostKeyChecking=no /tmp/fix_memory.py upstreamunix@vmyza934.hostpapavps.net:/tmp/fix_memory.py)",
+      "WebFetch(domain:www.googleapis.com)"
     ]
   }
 }

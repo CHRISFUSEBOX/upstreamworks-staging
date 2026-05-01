@@ -1,2 +1,11 @@
 # MCP config contains DB credentials - keep out of version control
 .mcp.json
+
+# Playwright screenshots and session files
+*.png
+*.jpg
+*.jpeg
+.playwright-mcp/
+
+# Local Claude Code settings
+.claude/settings.local.json
