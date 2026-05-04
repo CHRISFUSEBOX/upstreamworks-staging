@@ -6,6 +6,9 @@
  * @subpackage Default_Theme
  */
 
+// Suppress raw output of vidbg shortcode — plugin not installed, values were empty anyway.
+add_shortcode( 'vidbg', '__return_empty_string' );
+
 $content_width = 450;
 add_theme_support( 'post-thumbnails'); 
 //add_image_size( 'featured-img', 117, 114, true );

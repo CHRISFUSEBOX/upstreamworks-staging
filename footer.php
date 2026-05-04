@@ -42,6 +42,8 @@
 					<li><a class="fa-brands fa-square-facebook" target="_blank" href="<?php echo esc_url( get_field('facebook','options') ); ?>"></a></li>
 
                     <li><a class="fa-brands fa-square-bluesky" target="_blank" href="<?php echo esc_url( get_field('bluesky','options') ); ?>"></a></li>
+
+					<li><a class="fa-brands fa-x-twitter" target="_blank" href="https://x.com/Upstream_Works"></a></li>
 				</ul>
 			
 			</nav>
