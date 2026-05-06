@@ -161,4 +161,23 @@ add_filter( 'the_excerpt', 'remove_vc_from_excerpt' );
 // ACF Display Custom Fields
 add_filter( 'acf/settings/remove_wp_meta_box', '__return_false' );
 
+// LCP: preload hero background — browser fetches it immediately, bypassing WP Rocket's deferred CSS bg lazy load.
+// Serves the 768px crop to mobile (48KB) and the full scaled image to desktop (190KB).
+function usw_hero_preload() {
+	if ( ! is_front_page() ) {
+		return;
+	}
+	$base = content_url( '/uploads/2026/01/' );
+	echo '<link rel="preload" as="image" href="' . esc_url( $base . 'happy_customer_happy_biz-3-1-scaled.webp' ) . '" media="(min-width: 769px)" fetchpriority="high">' . "\n";
+	echo '<link rel="preload" as="image" href="' . esc_url( $base . 'happy_customer_happy_biz-3-1-768x1019.webp' ) . '" media="(max-width: 768px)" fetchpriority="high">' . "\n";
+}
+add_action( 'wp_head', 'usw_hero_preload', 1 );
+
+// LCP: exclude hero background from WP Rocket's CSS background image lazy loading.
+// Filter matches by URL substring — targeting the hero image filename.
+add_filter( 'rocket_lazyload_excluded_src', function( $excluded ) {
+	$excluded[] = 'happy_customer_happy_biz-3-1-scaled.webp';
+	return $excluded;
+} );
+
 
