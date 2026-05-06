@@ -180,4 +180,15 @@ add_filter( 'rocket_lazyload_excluded_src', function( $excluded ) {
 	return $excluded;
 } );
 
+// TBT: dequeue wp-fullcalendar and its render-blocking dependency (moment.min.js) on
+// pages that have no calendar. Saves ~55KB blocking JS on the homepage.
+add_action( 'wp_enqueue_scripts', 'usw_dequeue_noncalendar_scripts', 100 );
+function usw_dequeue_noncalendar_scripts() {
+	if ( is_front_page() ) {
+		wp_dequeue_script( 'wp-fullcalendar' );
+		wp_dequeue_script( 'moment' );
+		wp_dequeue_style( 'wp-fullcalendar' );
+	}
+}
+
 
