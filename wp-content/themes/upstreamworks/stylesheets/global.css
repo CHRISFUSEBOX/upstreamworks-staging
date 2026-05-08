@@ -477,6 +477,17 @@ a.hlink:active {
 .home .vc_custom_1001 .vc_row.vc_inner::before,
 .home .vc_custom_1001 .vc_row.vc_inner::after { display: none !important; }
 
+/* Partner logo carousels — greyscale, full colour on hover */
+.vc_images_carousel img {
+	filter: grayscale(100%);
+	opacity: 0.65;
+	transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.vc_images_carousel img:hover {
+	filter: grayscale(0%);
+	opacity: 1;
+}
+
 /* Whitepapers page — blue outline buttons (overrides site-wide green fill) */
 .page-id-973 .vc_btn3 {
 	background-color: transparent !important;
