@@ -8,7 +8,7 @@ add_action( 'wp_footer', function() {
 			if(document.querySelector('.usw-testimonial-slider'))return;
 			var section=document.querySelector('.vc_custom_1060');
 			if(!section)return;
-			var cols=Array.from(section.querySelectorAll('.vc_row.vc_inner [class*="vc_col"]'));
+			var cols=Array.from(section.querySelectorAll('.vc_row.vc_inner .wpb_column'));
 			var testimonials=cols.filter(function(c){return c.querySelector('blockquote');});
 			if(testimonials.length<2)return;
 			var data=testimonials.map(function(col){
@@ -23,18 +23,18 @@ add_action( 'wp_footer', function() {
 					role:role?role.textContent.trim():''
 				};
 			});
-			Array.from(section.querySelectorAll('.vc_row.vc_inner')).forEach(function(r){r.style.display='none';});
+			// Build slider before removing rows from DOM
 			var slider=document.createElement('div');slider.className='usw-testimonial-slider';
 			data.forEach(function(t,i){
 				var slide=document.createElement('div');
 				slide.className='usw-testimonial-slide'+(i===0?' usw-active':'');
-				slide.innerHTML='<span class="usw-quote-mark">“</span>'
+				slide.innerHTML='<span class=”usw-quote-mark”>”</span>'
 					+'<blockquote><p>'+t.quote+'</p></blockquote>'
-					+'<div class="usw-person">'
-					+(t.photo?'<img src="'+t.photo+'" alt="'+t.name+'" loading="lazy">':'')
-					+'<div class="usw-person-info">'
-					+'<div class="usw-person-name">'+t.name+'</div>'
-					+'<div class="usw-person-role">'+t.role+'</div>'
+					+'<div class=”usw-person”>'
+					+(t.photo?'<img src=”'+t.photo+'” alt=”'+t.name+'” loading=”lazy”>':'')
+					+'<div class=”usw-person-info”>'
+					+'<div class=”usw-person-name”>'+t.name+'</div>'
+					+'<div class=”usw-person-role”>'+t.role+'</div>'
 					+'</div></div>';
 				slider.appendChild(slide);
 			});
@@ -52,9 +52,11 @@ add_action( 'wp_footer', function() {
 				dotsEl.appendChild(dot);
 			});
 			slider.appendChild(prevBtn);slider.appendChild(nextBtn);slider.appendChild(dotsEl);
+			// Remove inner rows — inserts slider in their place, prevents functions.php dupe
 			var innerRows=Array.from(section.querySelectorAll('.vc_row.vc_inner'));
 			var lastRow=innerRows[innerRows.length-1];
 			lastRow.parentNode.insertBefore(slider,lastRow.nextSibling);
+			innerRows.forEach(function(r){r.remove();});
 			var slides=slider.querySelectorAll('.usw-testimonial-slide');
 			var dots=dotsEl.querySelectorAll('.usw-slider-dot');
 			var current=0,autoplay;
@@ -75,4 +77,4 @@ add_action( 'wp_footer', function() {
 	})();
 	</script>
 	<?php
-}, 10000 );
+}, 9998 );
