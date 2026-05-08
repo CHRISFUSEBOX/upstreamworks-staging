@@ -471,6 +471,10 @@ a.hlink:active {
     #bannerWrapper { margin-top: -190px; }
 }
 
+/* Homepage hero fixes */
+.home .vc_custom_1001 h1 { white-space: normal !important; }
+.home .vc_custom_1004 { background-position: 50% 20% !important; }
+
 /* Whitepapers page — blue outline buttons (overrides site-wide green fill) */
 .page-id-973 .vc_btn3 {
 	background-color: transparent !important;
