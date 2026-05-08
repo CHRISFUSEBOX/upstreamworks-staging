@@ -1,13 +1,4 @@
-fn = '/home/upstreamunix/stage.upstreamworks.com/wp-content/themes/upstreamworks/functions.php'
-with open(fn, 'r') as f:
-    content = f.read()
-
-marker = '// Testimonial slider — inline wp_footer'
-if marker in content:
-    print('Already present — nothing to do.')
-else:
-    block = r"""
-// Testimonial slider — inline wp_footer
+<?php
 add_action( 'wp_footer', function() {
 	if ( ! is_front_page() ) return;
 	?>
@@ -32,8 +23,7 @@ add_action( 'wp_footer', function() {
 				};
 			});
 			Array.from(section.querySelectorAll('.vc_row.vc_inner')).forEach(function(r){r.style.display='none';});
-			var slider=document.createElement('div');
-			slider.className='usw-testimonial-slider';
+			var slider=document.createElement('div');slider.className='usw-testimonial-slider';
 			data.forEach(function(t,i){
 				var slide=document.createElement('div');
 				slide.className='usw-testimonial-slide'+(i===0?' usw-active':'');
@@ -50,22 +40,17 @@ add_action( 'wp_footer', function() {
 			var prevBtn=document.createElement('button');
 			prevBtn.className='usw-slider-btn usw-slider-prev';
 			prevBtn.innerHTML='&#8249;';
-			prevBtn.setAttribute('aria-label','Previous');
 			var nextBtn=document.createElement('button');
 			nextBtn.className='usw-slider-btn usw-slider-next';
 			nextBtn.innerHTML='&#8250;';
-			nextBtn.setAttribute('aria-label','Next');
 			var dotsEl=document.createElement('div');
 			dotsEl.className='usw-slider-dots';
 			data.forEach(function(_,i){
 				var dot=document.createElement('button');
 				dot.className='usw-slider-dot'+(i===0?' usw-active':'');
-				dot.setAttribute('aria-label','Testimonial '+(i+1));
 				dotsEl.appendChild(dot);
 			});
-			slider.appendChild(prevBtn);
-			slider.appendChild(nextBtn);
-			slider.appendChild(dotsEl);
+			slider.appendChild(prevBtn);slider.appendChild(nextBtn);slider.appendChild(dotsEl);
 			var innerRows=Array.from(section.querySelectorAll('.vc_row.vc_inner'));
 			var lastRow=innerRows[innerRows.length-1];
 			lastRow.parentNode.insertBefore(slider,lastRow.nextSibling);
@@ -73,11 +58,9 @@ add_action( 'wp_footer', function() {
 			var dots=dotsEl.querySelectorAll('.usw-slider-dot');
 			var current=0,autoplay;
 			function goTo(n){
-				slides[current].classList.remove('usw-active');
-				dots[current].classList.remove('usw-active');
+				slides[current].classList.remove('usw-active');dots[current].classList.remove('usw-active');
 				current=((n%slides.length)+slides.length)%slides.length;
-				slides[current].classList.add('usw-active');
-				dots[current].classList.add('usw-active');
+				slides[current].classList.add('usw-active');dots[current].classList.add('usw-active');
 			}
 			function start(){autoplay=setInterval(function(){goTo(current+1);},6000);}
 			prevBtn.addEventListener('click',function(){goTo(current-1);});
@@ -92,8 +75,3 @@ add_action( 'wp_footer', function() {
 	</script>
 	<?php
 }, 9999 );
-"""
-    content += block
-    with open(fn, 'w') as f:
-        f.write(content)
-    print('Done, lines:', len(content.splitlines()))
