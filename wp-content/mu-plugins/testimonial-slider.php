@@ -5,6 +5,7 @@ add_action( 'wp_footer', function() {
 	<script>
 	(function(){
 		function init(){
+			if(document.querySelector('.usw-testimonial-slider'))return;
 			var section=document.querySelector('.vc_custom_1060');
 			if(!section)return;
 			var cols=Array.from(section.querySelectorAll('.vc_row.vc_inner [class*="vc_col"]'));
