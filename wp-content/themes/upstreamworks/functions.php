@@ -192,3 +192,18 @@ function usw_dequeue_noncalendar_scripts() {
 }
 
 
+
+
+// WPBakery carousel fix: vcCarousel._build() measures a stale 300px inline width
+// at init time. Clear it on load so resizeAction() uses the real container width.
+add_action( 'wp_footer', function() {
+	$js  = '<script>(function($){';
+	$js .= '$(window).on("load",function(){';
+	$js .= '$(".vc_images_carousel").each(function(){';
+	$js .= 'var $el=$(this),inst=$el.data("vc.vcCarousel");';
+	$js .= 'if(inst){$el.css("width","");inst.resizeAction();}';
+	$js .= '});';
+	$js .= '});';
+	$js .= '})(jQuery);</script>';
+	echo $js . "\n";
+}, 99999 );
