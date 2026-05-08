@@ -469,9 +469,20 @@ a.hlink:active {
 			
 @media (max-width:991px) and (min-width:768px) {
     #bannerWrapper { margin-top: -190px; }
-}			
-			
-			
+}
+
+/* Whitepapers page — blue outline buttons (overrides site-wide green fill) */
+.page-id-973 .vc_btn3 {
+	background-color: transparent !important;
+	border: 2px solid #0070C0 !important;
+	color: #0070C0 !important;
+}
+.page-id-973 .vc_btn3:hover,
+.page-id-973 .vc_btn3:focus {
+	background-color: #0070C0 !important;
+	border-color: #0070C0 !important;
+	color: #fff !important;
+}
 			
 			
 			
