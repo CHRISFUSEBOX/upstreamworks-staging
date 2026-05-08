@@ -474,6 +474,8 @@ a.hlink:active {
 /* Homepage hero fixes */
 .home .vc_custom_1001 h1 { white-space: normal !important; }
 .home .vc_custom_1004 { background-position: 50% 20% !important; }
+.home .vc_custom_1001 .vc_row.vc_inner::before,
+.home .vc_custom_1001 .vc_row.vc_inner::after { display: none !important; }
 
 /* Whitepapers page — blue outline buttons (overrides site-wide green fill) */
 .page-id-973 .vc_btn3 {
